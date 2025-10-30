@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter as FontSans } from 'next/font/google'
 
 import { Analytics } from '@vercel/analytics/next'
 
@@ -15,11 +14,6 @@ import Header from '@/components/header'
 import { ThemeProvider } from '@/components/theme-provider'
 
 import './globals.css'
-
-const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans'
-})
 
 const title = 'Morphic'
 const description =
@@ -69,8 +63,7 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          'min-h-screen flex flex-col font-sans antialiased',
-          fontSans.variable
+          'min-h-screen flex flex-col font-sans antialiased'
         )}
       >
         <ThemeProvider
